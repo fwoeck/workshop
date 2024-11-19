@@ -6,6 +6,9 @@
 
 **Aufgabe**:
 
+! Führe diese Aufgaben bitte im diesem Verzeichnis aus.
+  Checke dazu den Branch `feature/ABC-123` aus.
+
 - Update deinen develop
 - Rebase deinen Feature-Branch
 - Löse die Konflikte
