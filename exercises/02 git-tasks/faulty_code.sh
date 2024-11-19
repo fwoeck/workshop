@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo v1.0.0
+echo v1.0.1
 exit 0
