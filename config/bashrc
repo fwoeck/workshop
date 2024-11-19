@@ -1,0 +1,128 @@
+# History-Einstellungen
+HISTSIZE=10000
+HISTFILESIZE=20000
+HISTCONTROL=ignoreboth
+HISTTIMEFORMAT="%F %T "
+
+# History sofort speichern
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+# Nützliche Aliases
+alias ll='ls -la'
+alias l='ls -l'
+alias h='history'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias diff='diff --color=auto'
+alias ls='ls --color=auto'
+alias push='git push'
+alias pull='git pull'
+alias status='git status'
+alias commit='git commit'
+alias checkout='git checkout'
+alias branch='git branch'
+
+# Farben im Terminal
+export TERM=xterm-256color
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# Verbessertes Command Prompt
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# Verbesserte Pfad-Vervollständigung
+bind 'set show-all-if-ambiguous on'
+bind 'set completion-ignore-case on'
+
+# Nützliche Funktionen
+# Schnelles Verzeichnis erstellen und hineinwechseln
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
+# Dateien suchen
+ff() {
+    find . -type f -iname "*$1*"
+}
+
+# In Dateien suchen
+fif() {
+    grep -r "$1" .
+}
+
+# Git branch im Prompt anzeigen (wenn in einem Git repository)
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Erweitertes Prompt mit Git-Branch
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[33m\]$(parse_git_branch)\[\033[00m\]\$ '
+
+# Automatische Ergänzungen
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+# Path-Erweiterungen
+export PATH="$PATH:$HOME/.local/bin"
+
+# Editor-Einstellung
+export EDITOR=vim
+export VISUAL=vim
+
+# Weniger invasive Rechtevergabe
+umask 022
+
+# Zusätzliche Aliase für die Workshop-Aufgaben
+alias ports='netstat -tuln'
+alias procs='ps aux'
+alias disk='df -h'
+alias mem='free -h'
+alias tcp='netstat -tnlp'
+alias syslog='tail -f /var/log/syslog'
+alias serve='python3 -m http.server 8080'
+alias tree='tree -C'
+alias watch='watch '
+alias ducks='du -chs * | sort -rh | head'
+
+# Docker-spezifische Aliase
+alias d='docker'
+alias dc='docker-compose'
+alias dps='docker ps'
+alias dim='docker images'
+alias dex='docker exec -it'
+alias dlog='docker logs'
+alias dstop='docker stop'
+alias drm='docker rm'
+alias drmi='docker rmi'
+
+# Git-spezifische Funktionen
+# Schnelles Auschecken und Updaten eines Branches
+gco() {
+    git checkout "$1" && git pull
+}
+
+# Branch erstellen und auschecken
+gcb() {
+    git checkout -b "$1"
+}
+
+# Alle Änderungen in einem Commit
+gca() {
+    git add . && git commit -m "$1"
+}
+
+# SSH-spezifische Aliase
+alias sshl='ssh -L'
+alias sshf='ssh -N -f'
+alias sshk='ssh-keygen -t ed25519'
+
+# Systemüberwachung
+alias cpu='top -o %CPU'
+alias ram='top -o %MEM'
+alias pstree='pstree -p'
+
+# Workshop-spezifische Einstellungen
+export WORKSHOP_DIR="/workshop"
+cd $WORKSHOP_DIR

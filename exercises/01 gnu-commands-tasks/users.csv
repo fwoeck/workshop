@@ -1,0 +1,16 @@
+ID,FirstName,LastName,Email,Department,Role
+1,John,Doe,JOHN.DOE@company.com,Development,Senior Developer
+
+2,Jane,Smith,Jane.Smith@Company.com,Marketing,Manager
+3,Mike,Johnson,mike.johnson@company.com,Development,Developer
+
+4,Sarah,Williams,SARAH.W@company.com,HR,Team Lead
+5,Robert,Brown,Rob.Brown@COMPANY.COM,Development,DevOps Engineer
+
+6,Lisa,Davis,LISA.DAVIS@Company.com,Marketing,Content Manager
+
+7,David,Miller,david.miller@company.com,Development,Junior Developer
+8,Emma,Wilson,Emma.Wilson@Company.com,HR,Recruiter
+
+9,Michael,Taylor,Michael.T@COMPANY.COM,Development,Architect
+10,Anna,Anderson,ANNA.A@Company.com,Marketing,Social Media Manager

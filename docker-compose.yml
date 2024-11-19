@@ -1,0 +1,40 @@
+services:
+  workshop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: terminal-workshop
+    hostname: workshop
+    volumes:
+      # Mount des Workshop-Verzeichnisses
+      - ./exercises:/workshop/exercises
+      # Mount der SSH-Konfiguration
+      - ./config/ssh:/root/.ssh:ro
+      # Mount der Bash-Konfiguration
+      - ./config/bashrc:/root/.bashrc:ro
+      # Optional: Mount des Home-Verzeichnisses für Persistenz
+      - workshop_home:/root
+
+    # Port-Mappings für mögliche Dienste
+    ports:
+      - "8080:8080"  # Für Web-Dienste
+      - "13306:3306" # Für MySQL-Verbindungen
+    
+    # Container immer neu starten
+    restart: unless-stopped
+
+    # Zusätzliche Container-Einstellungen
+    environment:
+      - TERM=xterm-256color
+      - SHELL=/bin/bash
+    
+    # Ressourcen-Limits
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 512M
+
+volumes:
+  workshop_home:
