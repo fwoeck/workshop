@@ -6,11 +6,8 @@ cat > .git/hooks/pre-commit << 'EOF'
 #!/bin/bash
 set -e
 
-# PHP-CS-Fixer
-./vendor/bin/php-cs-fixer fix --dry-run --diff
-
 # Check für Debugging
-if grep -r "var_dump\|dump(" src/; then
+if grep -r "var_dump\|dump(" "./exercises/02\ git-tasks/src/"; then
   echo "ERROR: Found debugging statements"
   exit 1
 fi

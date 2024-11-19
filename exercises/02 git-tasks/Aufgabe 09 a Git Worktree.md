@@ -4,6 +4,10 @@
 
 **Szenario**: Du musst parallel an mehreren Branches arbeiten.  
 
+**Vorbereitung**:
+
+- Führe diese Aufgaben bitte in diesem Verzeichnis aus.
+
 **Aufgabe**:
 
 - Erstelle Worktrees für feature und hotfix

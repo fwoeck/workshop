@@ -4,6 +4,11 @@
 
 **Szenario**: Beim Rebase auf develop gibt es Konflikte.  
 
+**Vorbereitung**:
+
+- Führe diese Aufgaben bitte in diesem Verzeichnis aus.
+  Checke dazu den Branch `feature/ABC-123` aus.
+
 **Aufgabe**:
 
 - Update deinen develop

@@ -4,9 +4,11 @@
 
 **Szenario**: Du übernimmst ein bestehendes Feature und musst dich orientieren.  
 
-**Aufgabe**: 
+**Vorbereitung**:
 
-! Führe diese Aufgaben bitte im Mover-git-Repo durch.
+- Führe diese Aufgaben bitte im Mover-git-Repo durch.
+
+**Aufgabe**: 
 
 - Zeige alle unversionierten (ignorierten) Dateien
 - Liste alle Änderungen der letzten Woche

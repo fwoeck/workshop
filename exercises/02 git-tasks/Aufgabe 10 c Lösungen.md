@@ -18,10 +18,8 @@ git bisect run ./test-script.sh
 # Mit komplexem Test
 cat > test-script.sh << 'EOF'
 #!/bin/bash
-set -e
 
-composer install
-./bin/phpunit tests/SpecificTest.php
+./faulty_code.sh
 exit $?
 EOF
 chmod +x test-script.sh

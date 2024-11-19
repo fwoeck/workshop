@@ -4,9 +4,12 @@
 
 **Szenario**: Automatisiere Qualitätschecks vor dem Commit.  
 
+**Vorbereitung**:
+
+- Führe diese Aufgaben bitte in diesem (root-)Verzeichnis aus.
+
 **Aufgabe**:
 
 - Erstelle einen pre-commit Hook
-- Führe PHP-CS-Fixer aus
-- Prüfe auf versehentlich commitete Debugging-Statements
-- Validiere Commit-Messages
+- Prüfe auf versehentlich commitete Debugging-Statements in "./exercises/02 git-tasks/src/"
+- Validiere Commit-Messages, z.B.: Must start with: feat|fix|docs|style|refactor|test|chore

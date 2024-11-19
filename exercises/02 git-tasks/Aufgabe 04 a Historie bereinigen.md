@@ -4,10 +4,12 @@
 
 **Szenario**: Dein Feature-Branch hat mehrere "Work in Progress"-Commits.  
 
-**Aufgabe**:
+**Vorbereitung**:
 
-! Führe diese Aufgaben bitte im Mover-git-Repo durch.
+- Führe diese Aufgaben bitte im Mover-git-Repo durch.
   Checke am besten einen der aktuellen Feature-Branches aus.
+
+**Aufgabe**:
 
 - Zeige die letzten 5 Commits
 - Fasse die WIP-Commits zusammen
