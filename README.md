@@ -10,14 +10,25 @@ workshop/
 │   ├── bashrc
 │   └── ssh
 ├── docker-compose.yml
-└── exercises
-    ├── 01 gnu-commands-tasks
-    ├── 02 git-tasks
-    ├── 03 ssh-tasks
-    └── 04 docker-tasks
+├── exercises
+│   ├── 01 gnu-commands-tasks
+│   ├── 02 git-tasks
+│   ├── 03 ssh-tasks
+│   └── 04 docker-tasks
+└── notes
+    ├── 01 gnu-commands-tasks.md
+    ├── 02 git-tasks.md
+    ├── 03 ssh-tasks.md
+    └── 04 docker-tasks.md
 ```
 
 ## Verwendung
+
+0. Repo clonen:
+```bash
+git clone https://github.com/fwoeck/workshop.git
+cd workshop
+```
 
 1. Environment starten:
 ```bash
@@ -33,17 +44,3 @@ docker-compose exec workshop bash
 ```bash
 docker-compose down
 ```
-
-## Hinweise
-- Der Container enthält alle benötigten Tools für die Workshop-Aufgaben
-- Das `/workshop`-Verzeichnis ist der Hauptarbeitsbereich
-- SSH-Konfiguration ist vorbereitet für die SSH-Aufgaben
-- Bash-History und Home-Verzeichnis sind persistent
-- Die Umgebung ist minimal aber vollständig für die Aufgaben
-- Alle Standard-GNU-Tools sind verfügbar
-
-## Zusätzliche Konfigurationsmöglichkeiten
-- Weitere Volumes für spezifische Aufgaben
-- Zusätzliche Port-Mappings nach Bedarf
-- Anpassung der Ressourcen-Limits
-- Integration weiterer Tools über das Dockerfile
